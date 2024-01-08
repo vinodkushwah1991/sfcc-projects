@@ -1,0 +1,5 @@
+<isif condition="${customer.authenticated && pdict.lessThan18Years==false}">
+            <isinclude url="${URLUtils.url('Page-IncludeHeaderMenuWine')}" />
+    <iselse/>
+            <isinclude url="${URLUtils.url('Page-IncludeHeaderMenuNonWine')}" />
+ </isif>

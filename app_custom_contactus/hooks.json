@@ -1,0 +1,16 @@
+{
+    "hooks": [
+        {
+            "name": "custom.hook.sendMail",
+            "script": "./cartridge/scripts/hooks/customEmail.js"
+        },
+        {
+            "name": "aashu.custom.hook.test",
+            "script": "./cartridge/scripts/hooks/customHook.js"
+        },
+        {
+            "name": "custom.hook.calculate.sum",
+            "script": "./cartridge/scripts/hooks/customHook.js"
+        }
+    ]
+}

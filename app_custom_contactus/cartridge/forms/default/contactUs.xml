@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<form xmlns="http://www.demandware.com/xml/form/2008-04-19">
+
+    <field formid="email" label="label.input.email.profile" type="string" mandatory="true"
+    	   max-length="50" missing-error="error.message.required.email" range-error="error.message.50orless" binding="email"/>
+
+    <field formid="toMail" label="label.input.toMail.profile" type="string" mandatory="true" binding="toMail"
+           max-length="10" missing-error="error.toMail.missing" range-error="error.message.10orless">
+    <options label-binding="value" value-binding="key" optionid-binding="key" ></options>
+    </field>
+
+    <field formid="message" label="label.input.message.profile" type="string" mandatory="false" binding="message" missing-error="error.message.required.email"  max-length = "240" range-error = "error.message.240orless" />
+    <field formid="stateCode" label="label.input.state" type="string" mandatory="true" binding="stateCode" missing-error="error.message.required" value-error="address.field.invalid" parse-error="error.message.required">
+        <options label-binding="value" value-binding="key" optionid-binding="key" />
+	</field>
+
+    <field
+			formid="captchatoken"
+			type="string" />
+
+    <action formid="contactUs" valid-form="true"/>
+    <action formid="remove" valid-form="false"/>
+
+</form>

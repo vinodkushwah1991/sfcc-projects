@@ -1,0 +1,23 @@
+<isdecorate template="common/layout/page">
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets');
+        assets.addJs('/js/search.js');
+        assets.addCss('/css/search.css');
+    </isscript>
+    <isif condition="${pdict.reportingURLs && pdict.reportingURLs.length}">
+    <isinclude template="reporting/reportingUrls" />
+</isif>
+
+<!--- Search Results Banner --->
+
+    <div class="hero slant-down search-banner"
+        <!--- If no image, default is specified in search.scss > .search-banner --->
+        <isif condition="${pdict.productSearch.bannerImageUrl}">
+            style="background-image: url(${pdict.productSearch.bannerImageUrl})"
+        </isif>>
+        <h1 class="header page-title">
+           You are not eligible for this product
+        </h1>
+    </div>
+
+</isdecorate>
